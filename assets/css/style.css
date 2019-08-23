@@ -1,14 +1,12 @@
 body {
     background: url(../images/art.jpg);
 }
-
 h1 {
     font-family: 'Tangerine', cursive;
     color: antiquewhite;
     text-align: center;
     font-size: 48px;
 }
-
 p {
     color: antiquewhite;
     font-family: 'Amatic SC', cursive;
