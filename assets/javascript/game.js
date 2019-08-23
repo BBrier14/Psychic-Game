@@ -22,11 +22,12 @@ document.onkeyup = function(event) {
 
     var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 // Create "if" statements that the computer will respond to
+
     if (userGuess === computerGuess) {
         wins++;
         numberGuesses = 9
         guessLetters = []
-        alert("Winner!");
+        alert("You did it! Was it luck or do you have the gift? Try again!");
     }
 
     if (userGuess != computerGuess) {
@@ -37,7 +38,7 @@ document.onkeyup = function(event) {
             numberGuesses = 9;
             guessLetters = []
             loss++
-            alert("Loser!")
+            alert("Sorry, maybe this psychic thing isn't for you.")
         }
 
 
@@ -45,11 +46,13 @@ document.onkeyup = function(event) {
     }
 
     if (wins > 9) {
+        alert("You truly are gifted! Go play the lottery!");
         wins = 0;
         loss = 0;
     }
 
     if (loss > 9) {
+        alert("Maybe it's time to accept that you should stick to your day job")
         wins = 0;
         loss = 0;
     }
