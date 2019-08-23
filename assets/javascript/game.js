@@ -8,10 +8,13 @@ var numberGuesses = 10;
 var guessLetters = [];
 
 
+
 // Need to create a function for every time the user presses a key that includes variables
 document.onkeyup = function(event) {
 
     var userGuess = event.key;
+
+    
     
 // The computer needs to randomize choices
     var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
