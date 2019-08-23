@@ -28,6 +28,7 @@ document.onkeyup = function (event) {
     //     alert("stop");
     // }
 
+    
     if (userGuess === computerGuess) {
         wins++;
         numberGuesses = 9
@@ -39,15 +40,12 @@ document.onkeyup = function (event) {
         numberGuesses--;
         guessLetters.push(userGuess);
 
-        if (numberGuesses < 1) {
-            numberGuesses = 9;
-            guessLetters = []
-            loss++
-            alert("Sorry, maybe this psychic thing isn't for you.")
+     if (numberGuesses < 1) {
+         numberGuesses = 9;
+         guessLetters = []
+        loss++
+        alert("Sorry, maybe this psychic thing isn't for you.")
         }
-
-
-
     }
 
     if (wins > 9) {
