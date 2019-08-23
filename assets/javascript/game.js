@@ -10,29 +10,29 @@ var guessLetters = [];
 
 
 // Need to create a function for every time the user presses a key that includes variables
-document.onkeyup = function(event) {
+document.onkeyup = function (event) {
 
     var userGuess = event.key;
 
-    
-    
-// The computer needs to randomize choices
-    var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 
+
+    // The computer needs to randomize choices
+    var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+    console.log(computerGuess)
 
     var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-    
-// Create "if" statements that the computer will respond to
 
-// if (userGuess !== letters) {
-//     alert("stop");
-// }
+    // Create "if" statements that the computer will respond to
+
+    // if (userGuess !== letters) {
+    //     alert("stop");
+    // }
 
     if (userGuess === computerGuess) {
         wins++;
         numberGuesses = 9
         guessLetters = []
-        alert("You did it! Was it luck or do you have the gift? Try again!");
+        alert("You did it! You guessed " + "'" + userGuess + "'" + "! Was it luck or do you have the gift? Try again!");
     }
 
     if (userGuess != computerGuess) {
@@ -46,7 +46,7 @@ document.onkeyup = function(event) {
             alert("Sorry, maybe this psychic thing isn't for you.")
         }
 
-    
+
 
     }
 
@@ -65,7 +65,7 @@ document.onkeyup = function(event) {
 
 
 
-// Need the guesses and information to be displayed
+    // Need the guesses and information to be displayed
     document.getElementById("wins-text").innerHTML = "Wins: " + wins;
     document.getElementById("losses-text").innerHTML = "Losses: " + loss;
     document.getElementById("guessleft-text").innerHTML = "Guesses Left: " + numberGuesses;
@@ -74,7 +74,7 @@ document.onkeyup = function(event) {
 
 
 
-    
+
 
 }
 
