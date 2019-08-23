@@ -21,7 +21,12 @@ document.onkeyup = function(event) {
 
 
     var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+    
 // Create "if" statements that the computer will respond to
+
+// if (userGuess !== letters) {
+//     alert("stop");
+// }
 
     if (userGuess === computerGuess) {
         wins++;
@@ -41,7 +46,7 @@ document.onkeyup = function(event) {
             alert("Sorry, maybe this psychic thing isn't for you.")
         }
 
-
+    
 
     }
 
@@ -56,6 +61,8 @@ document.onkeyup = function(event) {
         wins = 0;
         loss = 0;
     }
+
+
 
 
 // Need the guesses and information to be displayed
