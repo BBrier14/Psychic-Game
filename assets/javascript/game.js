@@ -7,6 +7,8 @@ var loss = 0;
 var numberGuesses = 10;
 var guessLetters = [];
 
+var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+    console.log(computerGuess)
 
 
 // Need to create a function for every time the user presses a key that includes variables
@@ -17,9 +19,7 @@ document.onkeyup = function (event) {
 
 
     // The computer needs to randomize choices
-    var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
-    console.log(computerGuess)
-
+    
     var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
     // Create "if" statements that the computer will respond to
@@ -30,10 +30,12 @@ document.onkeyup = function (event) {
 
     
     if (userGuess === computerGuess) {
+        numberGuesses = 10;
+        guessLetters = [];
         wins++;
-        numberGuesses = 9
-        guessLetters = []
         alert("You did it! You guessed " + "'" + userGuess + "'" + "! Was it luck or do you have the gift? Try again!");
+        computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+        console.log(computerGuess);
     }
 
     if (userGuess != computerGuess) {
@@ -41,10 +43,12 @@ document.onkeyup = function (event) {
         guessLetters.push(userGuess);
 
      if (numberGuesses < 1) {
-         numberGuesses = 9;
+         numberGuesses = 10;
          guessLetters = []
         loss++
         alert("Sorry, maybe this psychic thing isn't for you.")
+        computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+        console.log(computerGuess);
         }
     }
 
@@ -52,15 +56,18 @@ document.onkeyup = function (event) {
         alert("You truly are gifted! Go play the lottery!");
         wins = 0;
         loss = 0;
+        
     }
-
     if (loss > 9) {
         alert("Maybe it's time to accept that you should stick to your day job")
         wins = 0;
         loss = 0;
+        
     }
 
-
+//every time a key is pressed I want to store it in an array,
+//every time a key is pressed i want to loop through this array and check if the key that i pressed is in the array
+// if ti is in the array, then i dont want to run my logic, otherwise, run my logic
 
 
     // Need the guesses and information to be displayed
