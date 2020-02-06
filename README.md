@@ -1,4 +1,5 @@
 # Psychic-Game
+https://bbrier14.github.io/Psychic-Game/
 
 ## Overview
 The Psychic game is a guessing game centered around the letters of the Alphabet.
@@ -18,3 +19,8 @@ the same letter as much as they would like.
 As of this version, I have been unsuccesful in preventing the user from entering keys that are not the alphabet.
 I have also struggled with making the computer stay with one letter per round. The game will be updated when these 
 solutions are found. 
+
+## Screenshots
+
+![](readmeimages/1.png)
+![](readmeimages/2.png)
